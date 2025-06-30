@@ -1,4 +1,5 @@
 import React from "react";
+import { useInView } from "react-intersection-observer";
 
 const Skills = () => {
   const skillCategories = [
@@ -26,25 +27,29 @@ const Skills = () => {
       skills: [
         { name: "Git", level: 92 },
         { name: "Github", level: 70 },
-        
         { name: "Firebase", level: 85 },
         { name: "Netlify", level: 95 },
-        
-        
-        
       ],
     },
   ];
 
+  const { ref, inView } = useInView({
+    triggerOnce: false, // যতবার স্ক্রল করবে ততবার হবে
+    threshold: 0.2, // ২০% দেখা গেলেই শুরু
+  });
+
   return (
-    <div id="skills" className="py-36 px-4 bg-base-100">
+    <div id="skills" ref={ref} className="py-36 px-4 bg-base-100">
       <h2 className="text-4xl font-bold text-center mb-10 text-primary">
         Skills & Expertise
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mx-auto">
         {skillCategories.map((category) => (
-          <div key={category.title} className="bg-base-200 p-6 rounded-xl shadow-lg">
+          <div
+            key={category.title}
+            className="bg-base-200 p-6 rounded-xl shadow-lg"
+          >
             <h3 className="text-2xl font-semibold text-center mb-6 text-secondary">
               {category.title}
             </h3>
@@ -52,13 +57,19 @@ const Skills = () => {
               {category.skills.map((skill) => (
                 <div key={skill.name} className="space-y-1">
                   <div className="flex justify-between items-center">
-                    <span className="font-medium text-base-content">{skill.name}</span>
-                    <span className="text-sm text-base-content">{skill.level}%</span>
+                    <span className="font-medium text-base-content">
+                      {skill.name}
+                    </span>
+                    <span className="text-sm text-base-content">
+                      {skill.level}%
+                    </span>
                   </div>
                   <div className="w-full bg-base-300 rounded-full h-2.5">
                     <div
-                      className="bg-gradient-to-r from-primary to-secondary h-2.5 rounded-full"
-                      style={{ width: `${skill.level}%` }}
+                      className="bg-gradient-to-r from-primary to-secondary h-2.5 rounded-full transition-all duration-2000"
+                      style={{
+                        width: inView ? `${skill.level}%` : "0%",
+                      }}
                     ></div>
                   </div>
                 </div>
