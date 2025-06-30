@@ -43,12 +43,7 @@ const Projects = () => {
       image: "https://i.postimg.cc/cHGYDtF3/Screenshot-2025-06-29-235608.png",
       description:
         "A job tracking app to manage job applications, statuses, and details with dashboard and authentication.",
-      shortFeatures: [
-        "React",
-        "Firebase Auth",
-        "Tailwind CSS",
-        "Dashboard",
-      ],
+      shortFeatures: ["React", "Firebase Auth", "Tailwind CSS", "Dashboard"],
       features: [
         "User Authentication (Firebase)",
         "Add/Edit/Delete Job Applications",
@@ -100,34 +95,46 @@ const Projects = () => {
         {projectList.map((project) => (
           <div
             key={project.id}
-            className="flex flex-col md:flex-row items-center gap-6 bg-base-200 rounded-2xl shadow-lg p-6"
+            className="flex flex-col md:flex-row items-stretch  gap-6 bg-base-200 rounded-2xl shadow-lg p-8"
           >
             {/* Image Section */}
-            <div className="md:w-1/2">
+            <div className="md:w-1/3 flex-shrink-0">
               <img
                 src={project.image}
                 alt={project.name}
-                className="w-full rounded-xl"
+                className="rounded-xl h-full object-cover w-full "
               />
             </div>
 
             {/* Info Section */}
-            <div className="md:w-1/2">
-              <h2 className="text-2xl font-semibold mb-3 text-secondary">
-                {project.name}
-              </h2>
-              <p className="text-base-content mb-4">{project.description}</p>
+            <div className="md:w-2/3 flex flex-col justify-between">
+              <div>
+                <h2 className="text-2xl font-semibold mb-4 text-secondary ">
+                  {project.name}
+                </h2>
+                <p className="text-base-content mb-4 line-clamp-3">
+                  {project.description}
+                </p>
 
-              {/* Tech Badges */}
-              <div className="flex flex-wrap gap-2 mb-6">
-                {project.shortFeatures.map((item, idx) => (
-                  <span
-                    key={idx}
-                    className="badge badge-outline badge-primary"
-                  >
-                    {item}
+                {/* Tech Stack Preview */}
+                <div className="flex flex-wrap gap-2 mb-4">
+                  <span className="badge badge-outline badge-primary">
+                    Frontend: {project.techStack.frontend}
                   </span>
-                ))}
+                  {project.techStack.auth && (
+                    <span className="badge badge-outline badge-secondary">
+                      Auth: {project.techStack.auth}
+                    </span>
+                  )}
+                </div>
+
+                {/* Short Features Preview */}
+                <ul className="list-disc list-inside text-sm mb-4 max-h-20 overflow-hidden">
+                  {project.features.slice(0, 4).map((feature, idx) => (
+                    <li key={idx}>{feature}</li>
+                  ))}
+                  {project.features.length > 4 && <li>and more...</li>}
+                </ul>
               </div>
 
               {/* Buttons */}
@@ -179,7 +186,9 @@ const Projects = () => {
             <h2 className="text-3xl font-bold mb-2 text-primary">
               {selectedProject.name}
             </h2>
-            <p className="mb-6 text-base-content">{selectedProject.description}</p>
+            <p className="mb-6 text-base-content">
+              {selectedProject.description}
+            </p>
 
             <h3 className="text-xl font-semibold mb-2 text-secondary">
               Features
