@@ -36,7 +36,7 @@ const Projects = () => {
         deployment: "Netlify",
       },
       liveLink: "https://roommate-finder-e3166.web.app/",
-      githubLink: "https://github.com/yourusername/roommate-finder-client",
+      githubLink: "https://github.com/mehedidevx/Roommate-Finder-Client",
     },
     {
       id: 2,
@@ -60,7 +60,7 @@ const Projects = () => {
         deployment: "Firebase Hosting",
       },
       liveLink: "https://job-track-5aaaf.web.app/",
-      githubLink: "https://github.com/your-username/jobtrack",
+      githubLink: "https://github.com/mehedidevx/Job-Track",
     },
     {
       id: 3,
@@ -81,8 +81,8 @@ const Projects = () => {
         frontend: "HTML, Tailwind CSS, DaisyUI",
         deployment: "Netlify / GitHub Pages",
       },
-      liveLink: "https://your-biker-zone-site-link.com",
-      githubLink: "https://github.com/your-username/biker-zone",
+      liveLink: "https://mehedidevx.github.io/Biker-Zone/",
+      githubLink: "https://github.com/mehedidevx/Biker-Zone",
     },
   ];
 
