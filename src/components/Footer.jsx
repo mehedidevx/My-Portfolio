@@ -4,7 +4,7 @@ import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 const Footer = () => {
   return (
     <footer className="bg-base-200 text-base-content">
-      <div className="max-w-7xl mx-auto px-4 py-10">
+      <div className="container mx-auto px-4 py-10">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           {/* Left */}
           <div className="text-center md:text-left">

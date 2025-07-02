@@ -15,16 +15,20 @@ import Skills from "./components/Skills";
 function App() {
   return (
     <>
-      <div className="container mx-auto">
+      <div>
         <Navbar></Navbar>
+        <div className="container mx-auto">
+        
         <Hero></Hero>
         <About></About>
         <Skills></Skills>
         <Education></Education>
         <Projects></Projects>
         <Contact></Contact>
-        <Footer></Footer>
+       
         <ToastContainer />
+      </div>
+       <Footer></Footer>
       </div>
     </>
   );

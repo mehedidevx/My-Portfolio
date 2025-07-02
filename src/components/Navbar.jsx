@@ -45,56 +45,58 @@ const Navbar = () => {
   );
 
   return (
-    <div className="navbar container mx-auto bg-base-100 shadow-md fixed top-0 left-0 right-0 z-50">
-      {/* Navbar Start */}
-      <div className="navbar-start">
-        <a className="text-2xl font-bold">Mehedi.</a>
-      </div>
+    <div className="navbar bg-base-300 shadow-md z-50 sticky top-0">
+      <div className="navbar  container mx-auto   top-0 left-0 right-0 z-50">
+        {/* Navbar Start */}
+        <div className="navbar-start ">
+          <a href="#home" className="text-2xl font-bold cursor-pointer">Mehedi.</a>
+        </div>
 
-      {/* Navbar Center */}
-      <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1 gap-4">{navItems}</ul>
-      </div>
+        {/* Navbar Center */}
+        <div className="navbar-center hidden lg:flex">
+          <ul className="menu menu-horizontal px-1 gap-4">{navItems}</ul>
+        </div>
 
-      {/* Navbar End */}
-      <div className="navbar-end">
-        <a
-          href="/resume.pdf"
-          download
-          className="btn hover:btn-primary btn-outline btn-sm hidden lg:flex"
-        >
-          Download Resume
-        </a>
-
-        {/* Mobile Dropdown */}
-        <div className="dropdown dropdown-end lg:hidden">
-          <label tabIndex={0} className="btn btn-ghost">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            </svg>
-          </label>
-          <ul
-            tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+        {/* Navbar End */}
+        <div className="navbar-end">
+          <a
+            href="/resume.pdf"
+            download
+            className="btn hover:btn-primary btn-outline btn-sm hidden lg:flex"
           >
-            {navItems}
-            <li>
-              <a href="/resume.pdf" download>
-                Download Resume
-              </a>
-            </li>
-          </ul>
+            Download Resume
+          </a>
+
+          {/* Mobile Dropdown */}
+          <div className="dropdown dropdown-end lg:hidden">
+            <label tabIndex={0} className="btn btn-ghost">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </label>
+            <ul
+              tabIndex={0}
+              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            >
+              {navItems}
+              <li>
+                <a href="/resume.pdf" download>
+                  Download Resume
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>

@@ -11,12 +11,7 @@ const Projects = () => {
       image: "https://i.postimg.cc/YCxJ2QWr/Screenshot-2025-06-29-235451.png",
       description:
         "A modern roommate searching platform with listings, profile management, like system, and contact reveal features.",
-      shortFeatures: [
-        "React",
-        "Firebase Auth",
-        "Tailwind CSS",
-        "Protected Routes",
-      ],
+      shortFeatures: ["React", "Firebase Auth", "Tailwind CSS", "Protected Routes"],
       features: [
         "User Authentication (Email & Google Login)",
         "Add, Edit & Delete Roommate Listings",
@@ -88,32 +83,27 @@ const Projects = () => {
 
   return (
     <div id="projects" className="py-36 px-4 bg-base-100 min-h-screen">
-      <Fade direction="down" duration={1200} triggerOnce={false}>
+      <Fade direction="down" triggerOnce>
         <h2 className="text-4xl font-bold text-center mb-12 text-primary">
           Projects
         </h2>
       </Fade>
 
-      <div className="space-y-8 mx-auto">
+      <div className="space-y-10">
         {projectList.map((project) => (
-          <Slide
-            key={project.id}
-            direction="up"
-            duration={1200}
-            triggerOnce={false}
-          >
-            <div className="flex flex-col md:flex-row items-stretch gap-6 bg-base-200 rounded-2xl shadow-lg p-8">
+          <Slide key={project.id} direction="up" triggerOnce>
+            <div className="flex flex-col md:flex-row items-stretch gap-6 bg-base-200 rounded-2xl shadow-md p-6">
               {/* Image Section */}
-              <div className="md:w-1/3 flex-shrink-0">
+              <div className="md:w-1/2">
                 <img
                   src={project.image}
                   alt={project.name}
-                  className="rounded-xl h-full object-cover w-full"
+                  className="rounded-xl w-full h-64 md:h-full object-cover "
                 />
               </div>
 
               {/* Info Section */}
-              <div className="md:w-2/3 flex flex-col justify-between">
+              <div className="md:w-1/2 flex flex-col justify-between">
                 <div>
                   <h2 className="text-2xl font-semibold mb-4 text-secondary">
                     {project.name}
@@ -123,17 +113,17 @@ const Projects = () => {
                   </p>
 
                   <div className="flex flex-wrap gap-2 mb-4">
-                    <span className="badge badge-outline badge-primary">
-                      Frontend: {project.techStack.frontend}
-                    </span>
-                    {project.techStack.auth && (
-                      <span className="badge badge-outline badge-secondary">
-                        Auth: {project.techStack.auth}
+                    {project.shortFeatures.map((item, idx) => (
+                      <span
+                        key={idx}
+                        className="badge badge-outline badge-primary"
+                      >
+                        {item}
                       </span>
-                    )}
+                    ))}
                   </div>
 
-                  <ul className="list-disc list-inside text-sm mb-4 max-h-20 overflow-hidden">
+                  <ul className="list-disc list-inside text-sm mb-4 space-y-1">
                     {project.features.slice(0, 4).map((feature, idx) => (
                       <li key={idx}>{feature}</li>
                     ))}
@@ -174,7 +164,7 @@ const Projects = () => {
       {/* Modal */}
       {selectedProject && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-          <Zoom duration={500} triggerOnce={false}>
+          <Zoom triggerOnce>
             <div className="bg-base-100 rounded-2xl shadow-xl max-w-3xl w-full p-6 relative overflow-y-auto max-h-[90vh]">
               <button
                 className="absolute top-3 right-3 btn btn-sm btn-circle"
