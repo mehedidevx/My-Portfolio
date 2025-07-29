@@ -7,11 +7,41 @@ const Projects = () => {
   const projectList = [
     {
       id: 1,
+      name: "Artifact Tracker",
+      image: "https://i.postimg.cc/269jcR2b/Screenshot-2025-07-29-212328.png",
+      description:
+        "A historical artifact tracking system to store, update, and display valuable artifacts with secure user authentication.",
+      shortFeatures: ["React", "Firebase Auth", "MongoDB", "Dashboard"],
+      features: [
+        "User Authentication (Firebase Email & Google Login)",
+        "Add, Edit & Delete Artifacts with Image Upload",
+        "Browse All Artifacts with Filtering Options",
+        "My Artifacts Management Dashboard",
+        "Responsive Design with Light & Dark Theme",
+        "Protected Routes with Conditional Access",
+      ],
+      techStack: {
+        frontend: "React.js, Tailwind CSS, DaisyUI, React Router DOM",
+        backend: "Node.js, Express.js, MongoDB",
+        auth: "Firebase Authentication",
+        imageUpload: "imgbb API",
+        deployment: "Vercel (Client), Render (Server)",
+      },
+      liveLink: "https://artifacts-tracker-9558c.web.app/",
+      githubLink: "https://github.com/mehedidevx/Artifact-Tracker-Client",
+    },
+    {
+      id: 2,
       name: "Roommate Finder Website",
-      image: "https://i.postimg.cc/YCxJ2QWr/Screenshot-2025-06-29-235451.png",
+      image: "https://i.postimg.cc/dtwkhvgv/Screenshot-2025-07-29-213032.png",
       description:
         "A modern roommate searching platform with listings, profile management, like system, and contact reveal features.",
-      shortFeatures: ["React", "Firebase Auth", "Tailwind CSS", "Protected Routes"],
+      shortFeatures: [
+        "React",
+        "Firebase Auth",
+        "Tailwind CSS",
+        "Protected Routes",
+      ],
       features: [
         "User Authentication (Email & Google Login)",
         "Add, Edit & Delete Roommate Listings",
@@ -34,9 +64,9 @@ const Projects = () => {
       githubLink: "https://github.com/mehedidevx/Roommate-Finder-Client",
     },
     {
-      id: 2,
+      id: 3,
       name: "JobTrack - Job Application Manager",
-      image: "https://i.postimg.cc/cHGYDtF3/Screenshot-2025-06-29-235608.png",
+      image: "https://i.postimg.cc/C563pwqD/Screenshot-2025-07-29-213404.png",
       description:
         "A job tracking app to manage job applications, statuses, and details with dashboard and authentication.",
       shortFeatures: ["React", "Firebase Auth", "Tailwind CSS", "Dashboard"],
@@ -58,9 +88,9 @@ const Projects = () => {
       githubLink: "https://github.com/mehedidevx/Job-Track",
     },
     {
-      id: 3,
+      id: 4,
       name: "Biker Zone",
-      image: "https://i.postimg.cc/NM0YvpCv/Screenshot-2025-06-29-235714.png",
+      image: "https://i.postimg.cc/ncSFnJJ3/Screenshot-2025-07-29-213307.png",
       description:
         "A responsive bike shop website showcasing featured bikes, client reviews, and FAQs using pure HTML and Tailwind.",
       shortFeatures: ["HTML", "Tailwind CSS", "DaisyUI"],
@@ -83,7 +113,7 @@ const Projects = () => {
 
   return (
     <div id="projects" className="py-36 px-4 bg-base-100 min-h-screen">
-      <Fade direction="down" triggerOnce>
+      <Fade direction="down" >
         <h2 className="text-4xl font-bold text-center mb-12 text-primary">
           Projects
         </h2>
@@ -91,7 +121,7 @@ const Projects = () => {
 
       <div className="space-y-10">
         {projectList.map((project) => (
-          <Slide key={project.id} direction="up" triggerOnce>
+          <Slide key={project.id} direction="up" >
             <div className="flex flex-col md:flex-row items-stretch gap-6 bg-base-200 rounded-2xl shadow-md p-6">
               {/* Image Section */}
               <div className="md:w-1/2">
@@ -103,7 +133,7 @@ const Projects = () => {
               </div>
 
               {/* Info Section */}
-              <div className="md:w-1/2 flex flex-col justify-between">
+              <div className="md:w-1/2 flex flex-col justify-between ">
                 <div>
                   <h2 className="text-2xl font-semibold mb-4 text-secondary">
                     {project.name}
@@ -164,7 +194,7 @@ const Projects = () => {
       {/* Modal */}
       {selectedProject && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-          <Zoom triggerOnce>
+          <Zoom >
             <div className="bg-base-100 rounded-2xl shadow-xl max-w-3xl w-full p-6 relative overflow-y-auto max-h-[90vh]">
               <button
                 className="absolute top-3 right-3 btn btn-sm btn-circle"

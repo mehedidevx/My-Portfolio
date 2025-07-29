@@ -34,8 +34,8 @@ const Navbar = () => {
             href={`#${item}`}
             className={
               activeSection === item
-                ? "text-blue-600 font-semibold border-b-2 border-blue-600 text-bold"
-                : "text-bold"
+                ? "text-blue-600 font-semibold border-b-2 border-blue-600 "
+                : "font-semibold  hover:text-blue-600 transition-colors duration-300"
             }
           >
             {item.charAt(0).toUpperCase() + item.slice(1)}

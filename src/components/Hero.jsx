@@ -55,7 +55,7 @@ const Hero = () => {
         {/* Image Section */}
         <div className="flex-1  flex justify-end">
           <img
-            src="https://i.postimg.cc/YCw3pTBp/1706348062640.jpg"
+            src="https://i.postimg.cc/JnpCrNk9/IMG-20250728-035339.jpg"
             alt="mehedi"
             className="w-72 cursor-pointer lg:w-96 h-72 lg:h-96 rounded-full border-4 border-primary shadow-lg  transition duration-500"
           />
