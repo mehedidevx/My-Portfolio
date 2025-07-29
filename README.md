@@ -1,10 +1,10 @@
 
 <p align="center"></p>
-    <a href="https://your-portfolio-site.netlify.app" target="_blank">
+    <a href="https://mehedi-s-portfolio.netlify.app/" target="_blank">
         <img src="https://img.shields.io/badge/Live%20Site-Visit-green?style=for-the-badge" alt="Live Site" />
     </a>
     <br>
-    <a href="https://your-portfolio-site.netlify.app" target="_blank">
+    <a href="https://mehedi-s-portfolio.netlify.app/" target="_blank">
         <strong>🌐 Visit the Live Portfolio Site</strong>
     </a>
 </p>
