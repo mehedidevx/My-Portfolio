@@ -60,7 +60,7 @@ const Hero = () => {
             className="w-72 cursor-pointer lg:w-96 h-72 lg:h-96 rounded-full border-4 border-primary shadow-lg  transition duration-500"
           />
         </div>
-      </div>
+      </div>   
     </div>
   );
 };

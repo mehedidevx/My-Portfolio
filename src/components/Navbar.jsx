@@ -60,7 +60,7 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1 gap-4">{navItems}</ul>
         </div>
 
-        {/* Navbar End */}
+        {/* Navbar End  */}
 
         <div className="navbar-end flex gap-4">
           <Theme />
