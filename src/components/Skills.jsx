@@ -34,8 +34,8 @@ const Skills = () => {
   ];
 
   const { ref, inView } = useInView({
-    triggerOnce: false, // যতবার স্ক্রল করবে ততবার হবে
-    threshold: 0.2, // ২০% দেখা গেলেই শুরু
+    triggerOnce: false, 
+    threshold: 0.2, 
   });
 
   return (
