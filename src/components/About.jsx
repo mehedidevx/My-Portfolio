@@ -6,7 +6,7 @@ const About = () => {
     <section id="about" className="py-32 px-4 bg-base-100">
       <div className="mx-auto">
         <Fade direction="up" duration={1200}>
-          <h2 className="text-4xl font-bold text-center mb-12 text-primary">
+          <h2 className="text-4xl font-bold text-center mb-12 text-[#00BBA7]">
             About Me
           </h2>
         </Fade>
@@ -40,27 +40,27 @@ const About = () => {
               </h3>
               <ul className="space-y-3 text-base-content">
                 <li className="flex items-start gap-2">
-                  <span className="text-primary">•</span>
+                  <span className="text-[#00BBA7]">•</span>
                   <span>MERN Stack Development</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-primary">•</span>
+                  <span className="text-[#00BBA7]">•</span>
                   <span>Firebase Authentication & JWT Security</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-primary">•</span>
+                  <span className="text-[#00BBA7]">•</span>
                   <span>RESTful API with Express & MongoDB</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-primary">•</span>
+                  <span className="text-[#00BBA7]">•</span>
                   <span>Stripe Payment Integration</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-primary">•</span>
+                  <span className="text-[#00BBA7]">•</span>
                   <span>Responsive UI with Tailwind CSS</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-primary">•</span>
+                  <span className="text-[#00BBA7]">•</span>
                   <span>
                     Deploying Full-Stack Apps (Vercel, Netlify, Render)
                   </span>

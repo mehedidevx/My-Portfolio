@@ -2,12 +2,12 @@ import { TypeAnimation } from "react-type-animation";
 
 const Hero = () => {
   return (
-    <div id="home" className="w-full pt-40 py-20">
-      <div className=" mx-auto flex flex-col-reverse lg:flex-row items-center justify-between gap-10 px-4 py-9">
+    <div id="home" className="w-full pt-40 py-20 ">
+      <div className=" mx-auto flex flex-col-reverse lg:flex-row items-center justify-between gap-10 px-4 py-9 ">
         {/* Text Section */}
-        <div className="flex-1">
+        <div className="flex-1 ">
           <h1 className="text-5xl font-bold mb-4">
-            Hi! I'm <span className="text-primary">Md Mehedi Hasan</span>
+            Hi! I'm <span className="text-[#00BBA7]">Md Mehedi Hasan</span>
           </h1>
 
           <TypeAnimation
@@ -23,7 +23,7 @@ const Hero = () => {
             ]}
             wrapper="span"
             speed={50}
-            className="text-xl text-primary font-semibold"
+            className="text-xl text-[#00BBA7] font-semibold"
             repeat={Infinity}
           />
 
@@ -33,19 +33,19 @@ const Hero = () => {
 
           <div className="flex gap-4 flex-wrap">
             <a href="/Mehedi_Resume.pdf" download>
-              <button className="btn btn-primary hover:bg-transparent">Download Resume</button>
+              <button className="btn bg-[#00BBA7] hover:text-[#00BBA7] text-white hover:bg-transparent ">Download Resume</button>
             </a>
             <a
               href="https://github.com/mehedidevx"
               target="_blank"
-              className="btn btn-outline"
+             
             >
-              GitHub
+             <button  className="btn  border-gray-300 hover:border-none hover:bg-[#00BBA7]  hover:text-black dark:hover:text-white">GitHub</button>
             </a>
             <a
               href="https://linkedin.com/mehedidevx"
               target="_blank"
-              className="btn btn-outline"
+              className="btn  border-gray-300 hover:border-none  hover:bg-[#00BBA7]  hover:text-black dark:hover:text-white"
             >
               LinkedIn
             </a>

@@ -40,7 +40,7 @@ const Skills = () => {
 
   return (
     <div id="skills" ref={ref} className="py-36 px-4 bg-base-100">
-      <h2 className="text-4xl font-bold text-center mb-10 text-primary">
+      <h2 className="text-4xl font-bold text-center mb-10 text-[#00BBA7]">
         Skills & Expertise
       </h2>
 

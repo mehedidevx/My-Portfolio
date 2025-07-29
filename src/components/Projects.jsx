@@ -114,7 +114,7 @@ const Projects = () => {
   return (
     <div id="projects" className="py-36 px-4 bg-base-100 min-h-screen">
       <Fade direction="down" >
-        <h2 className="text-4xl font-bold text-center mb-12 text-primary">
+        <h2 className="text-4xl font-bold text-center mb-12 text-[#00BBA7]">
           Projects
         </h2>
       </Fade>
@@ -208,7 +208,7 @@ const Projects = () => {
                 alt={selectedProject.name}
                 className="rounded-xl mb-4"
               />
-              <h2 className="text-3xl font-bold mb-2 text-primary">
+              <h2 className="text-3xl font-bold mb-2 text-[#00BBA7]">
                 {selectedProject.name}
               </h2>
               <p className="mb-6 text-base-content">

@@ -29,16 +29,26 @@ const Navbar = () => {
   const navItems = (
     <>
       {["home", "about", "skills", "projects", "contact"].map((item) => (
-        <li key={item}>
+        <li key={item} className="list-none">
           <a
             href={`#${item}`}
-            className={
-              activeSection === item
-                ? "text-blue-600 font-semibold border-b-2 border-blue-600 "
-                : "font-semibold  hover:text-blue-600 transition-colors duration-300"
-            }
+            className="relative group font-medium px-3 py-2 text-[16px] tracking-wide transition-colors duration-300"
           >
-            {item.charAt(0).toUpperCase() + item.slice(1)}
+            <span
+              className={
+                activeSection === item
+                  ? "text-[#00BBA7]"
+                  : "  group-hover:text-[#00BBA7]"
+              }
+            >
+              {item.charAt(0).toUpperCase() + item.slice(1)}
+            </span>
+
+            {/* Underline */}
+            <span
+              className={`absolute left-0 bottom-0 h-[2px] bg-[#00BBA7] transition-all duration-500
+          ${activeSection === item ? "w-full" : "w-0 group-hover:w-full"}`}
+            ></span>
           </a>
         </li>
       ))}
@@ -46,30 +56,29 @@ const Navbar = () => {
   );
 
   return (
-    <div className="navbar bg-base-300 shadow-md z-50 sticky top-0">
-      <div className="navbar  container mx-auto   top-0 left-0 right-0 z-50">
+    <div className="navbar bg-base-100 backdrop-blur-lg shadow-md sticky top-0 z-50 transition duration-300">
+      <div className="container mx-auto px-4 py-2 flex justify-between items-center">
         {/* Navbar Start */}
-        <div className="navbar-start ">
-          <a href="#home" className="text-2xl font-bold cursor-pointer">
-            Mehedi.
+        <div className="text-2xl font-bold text-[#00BBA7] hover:text-[#009688] transition duration-300">
+          <a href="#home">
+            Mehedi<span className="text-gray-700 dark:text-white">.</span>
           </a>
         </div>
 
         {/* Navbar Center */}
-        <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1 gap-4">{navItems}</ul>
+        <div className="hidden lg:flex">
+          <ul className="flex space-x-6 items-center">{navItems}</ul>
         </div>
 
-        {/* Navbar End  */}
-
-        <div className="navbar-end flex gap-4">
+        {/* Navbar End */}
+        <div className="flex items-center gap-3">
           <Theme />
           <a
             href="/Mehedi_Resume.pdf"
             download
-            className="btn hover:btn-primary btn-outline btn-sm hidden lg:flex"
+            className="hidden lg:inline-flex px-4 py-2 border border-[#00BBA7] rounded-lg font-semibold text-[#00BBA7] hover:bg-[#00BBA7] hover:text-white transition duration-300"
           >
-            Download Resume
+            Resume
           </a>
 
           {/* Mobile Dropdown */}
@@ -77,7 +86,7 @@ const Navbar = () => {
             <label tabIndex={0} className="btn btn-ghost">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
+                className="h-6 w-6"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -92,11 +101,15 @@ const Navbar = () => {
             </label>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow-lg bg-base-100 rounded-box w-52 space-y-2"
             >
               {navItems}
               <li>
-                <a href="/Mehedi_Resume.pdf" download className="btn">
+                <a
+                  href="/Mehedi_Resume.pdf"
+                  download
+                  className="btn btn-outline text-sm"
+                >
                   Download Resume
                 </a>
               </li>

@@ -4,7 +4,7 @@ import { Slide } from "react-awesome-reveal";
 const Education = () => {
   return (
     <div id="education" className="p-8 py-24 bg-base-100">
-      <h2 className="text-4xl font-bold text-center mb-10 text-primary">
+      <h2 className="text-4xl font-bold text-center mb-10 text-[#00BBA7]">
         Education
       </h2>
 
