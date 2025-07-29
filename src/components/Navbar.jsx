@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Theme from "./Theme";
 
 const Navbar = () => {
   const [activeSection, setActiveSection] = useState("home");
@@ -49,7 +50,9 @@ const Navbar = () => {
       <div className="navbar  container mx-auto   top-0 left-0 right-0 z-50">
         {/* Navbar Start */}
         <div className="navbar-start ">
-          <a href="#home" className="text-2xl font-bold cursor-pointer">Mehedi.</a>
+          <a href="#home" className="text-2xl font-bold cursor-pointer">
+            Mehedi.
+          </a>
         </div>
 
         {/* Navbar Center */}
@@ -58,9 +61,11 @@ const Navbar = () => {
         </div>
 
         {/* Navbar End */}
-        <div className="navbar-end">
+
+        <div className="navbar-end flex gap-4">
+          <Theme />
           <a
-            href="/resume.pdf"
+            href="/Mehedi_Resume.pdf"
             download
             className="btn hover:btn-primary btn-outline btn-sm hidden lg:flex"
           >
@@ -91,7 +96,7 @@ const Navbar = () => {
             >
               {navItems}
               <li>
-                <a href="/resume.pdf" download>
+                <a href="/Mehedi_Resume.pdf" download className="btn">
                   Download Resume
                 </a>
               </li>

@@ -32,7 +32,7 @@ const Hero = () => {
           </p>
 
           <div className="flex gap-4 flex-wrap">
-            <a href="/resume.pdf" download>
+            <a href="/Mehedi_Resume.pdf" download>
               <button className="btn btn-primary hover:bg-transparent">Download Resume</button>
             </a>
             <a
@@ -57,7 +57,7 @@ const Hero = () => {
           <img
             src="https://i.postimg.cc/YCw3pTBp/1706348062640.jpg"
             alt="mehedi"
-            className="w-72 cursor-pointer lg:w-96 h-72 lg:h-96 rounded-full border-4 border-primary shadow-lg lg:opacity-30 hover:opacity-80 transition duration-500"
+            className="w-72 cursor-pointer lg:w-96 h-72 lg:h-96 rounded-full border-4 border-primary shadow-lg  transition duration-500"
           />
         </div>
       </div>
