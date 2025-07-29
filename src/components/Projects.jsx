@@ -166,7 +166,7 @@ const Projects = () => {
                     href={project.liveLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn btn-primary btn-sm"
+                    className="btn bg-[#00BBA7] btn-sm"
                   >
                     Live Site
                   </a>
@@ -174,7 +174,7 @@ const Projects = () => {
                     href={project.githubLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn btn-outline btn-sm"
+                    className="btn btn-outline hover:bg-[#00BBA7] btn-sm"
                   >
                     GitHub
                   </a>
@@ -267,7 +267,7 @@ const Projects = () => {
                   href={selectedProject.liveLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn btn-primary btn-sm"
+                  className="btn bg-[#00BBA7] btn-sm"
                 >
                   Live Site
                 </a>
@@ -275,7 +275,7 @@ const Projects = () => {
                   href={selectedProject.githubLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn btn-outline btn-sm"
+                  className="btn btn-outline hover:bg-[#00BBA7] btn-sm"
                 >
                   GitHub
                 </a>

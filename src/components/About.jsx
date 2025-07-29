@@ -14,7 +14,7 @@ const About = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
           {/* Left - My Journey */}
           <Slide direction="up" duration={1500}>
-            <div className="border border-gray-600 p-6 rounded-2xl shadow-lg h-full">
+            <div className="border border-[#00BBA7] p-6 rounded-2xl shadow-lg h-full">
               <h3 className="text-2xl font-semibold mb-4 text-secondary">
                 My Journey
               </h3>

@@ -124,7 +124,7 @@ const Contact = () => {
               
               <button onSubmit={handleSubmit}
                 type="submit"
-                className="w-full py-3 px-6 bg-gradient-to-r from-primary to-secondary text-white font-semibold rounded-lg hover:opacity-90 transition-opacity cursor-pointer"
+                className="w-full py-3 px-6 bg-[#00BBA7] text-white font-semibold rounded-lg hover:opacity-90 transition-opacity cursor-pointer"
               >
                 Send Message
               </button>
