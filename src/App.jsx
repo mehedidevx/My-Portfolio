@@ -22,8 +22,8 @@ function App() {
         <Hero></Hero>
         <About></About>
         <Skills></Skills>
-        <Education></Education>
         <Projects></Projects>
+        <Education></Education>
         <Contact></Contact>
        
         <ToastContainer />

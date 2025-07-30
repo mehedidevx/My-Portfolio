@@ -1,11 +1,20 @@
 @import "tailwindcss";
 @plugin "daisyui";
- @plugin "daisyui";
- @plugin "daisyui" {
-   themes: light --default, dark --prefersdark;
- }
+
 a.active {
   color: #00BBA7; /* blue-600 */
-
- 
 }
+.btn-primary {
+  background-color: #00BBA7; /* blue-600 */
+  color: white;
+}
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.animate-spin-slow {
+  animation: spin 28s linear infinite;
+}
+
+
+

@@ -3,9 +3,10 @@ import { TypeAnimation } from "react-type-animation";
 const Hero = () => {
   return (
     <div id="home" className="w-full pt-40 py-20 ">
-      <div className=" mx-auto flex flex-col-reverse lg:flex-row items-center justify-between gap-10 px-4 py-9 ">
+      <div className=" mx-auto flex flex-col lg:flex-row items-center justify-between gap-10 px-4 md:py-9 ">
         {/* Text Section */}
-        <div className="flex-1 ">
+
+        <div className="flex-1">
           <h1 className="text-5xl font-bold mb-4">
             Hi! I'm <span className="text-[#00BBA7]">Md Mehedi Hasan</span>
           </h1>
@@ -27,40 +28,53 @@ const Hero = () => {
             repeat={Infinity}
           />
 
-          <p className="py-6 text-gray-600">
-            Passionate about building user-friendly web applications.
+          <p className="py-4 text-gray-600">
+            I love crafting clean, responsive, and user-centric web apps.
           </p>
 
-          <div className="flex gap-4 flex-wrap">
+          <p className="text-gray-600 text-sm leading-relaxed">
+            💻 Skilled in React.js, Node.js, Express, MongoDB, and Firebase.{" "}
+            <br />
+            🚀 Currently learning advanced full-stack development. <br />
+            🌍 Based in Debiganj, Bangladesh | Open to remote opportunities.{" "}
+            <br />
+           
+          </p>
+
+          <div className="flex gap-4 flex-wrap mt-6">
             <a href="/Mehedi_Resume.pdf" download>
-              <button className="btn bg-[#00BBA7] hover:text-[#00BBA7] text-white hover:bg-transparent ">Download Resume</button>
+              <button className="btn bg-[#00BBA7] hover:text-[#00BBA7] text-white hover:bg-transparent">
+                Resume
+              </button>
             </a>
-            <a
-              href="https://github.com/mehedidevx"
-              target="_blank"
-             
-            >
-             <button  className="btn  border-gray-300 hover:border-none hover:bg-[#00BBA7]  hover:text-black dark:hover:text-white">GitHub</button>
+            <a href="https://github.com/mehedidevx" target="_blank">
+              <button className="btn border-gray-300 hover:border-none hover:bg-[#00BBA7] hover:text-black dark:hover:text-white">
+                GitHub
+              </button>
             </a>
-            <a
-              href="https://linkedin.com/mehedidevx"
-              target="_blank"
-              className="btn  border-gray-300 hover:border-none  hover:bg-[#00BBA7]  hover:text-black dark:hover:text-white"
-            >
-              LinkedIn
+            <a href="https://linkedin.com/mehedidevx" target="_blank">
+              <button className="btn border-gray-300 hover:border-none hover:bg-[#00BBA7] hover:text-black dark:hover:text-white">
+                LinkedIn
+              </button>
             </a>
           </div>
         </div>
 
         {/* Image Section */}
-        <div className="flex-1  flex justify-end">
-          <img
-            src="https://i.postimg.cc/JnpCrNk9/IMG-20250728-035339.jpg"
-            alt="mehedi"
-            className="w-72 cursor-pointer lg:w-96 h-72 lg:h-96 rounded-full border-4 border-[#00BBA7] shadow-lg  transition duration-500"
-          />
+        <div className="flex-1 flex justify-end">
+          <div className="relative md:w-120 md:h-120 lg:w-96 lg:h-96">
+            {/* Spinning dashed border */}
+            <div className="absolute inset-0 z-10 rounded-full border-4 border-dashed border-[#00BBA7] animate-spin-slow"></div>
+
+            {/* Static image inside */}
+            <img
+              src="https://i.postimg.cc/JnpCrNk9/IMG-20250728-035339.jpg"
+              alt="mehedi"
+              className="relative w-full  h-full object-cover rounded-full shadow-lg transition duration-500"
+            />
+          </div>
         </div>
-      </div>   
+      </div>
     </div>
   );
 };

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Theme from "./Theme";
+
 
 const Navbar = () => {
   const [activeSection, setActiveSection] = useState("home");
@@ -72,7 +72,7 @@ const Navbar = () => {
 
         {/* Navbar End */}
         <div className="flex items-center gap-3">
-          <Theme />
+          
           <a
             href="/Mehedi_Resume.pdf"
             download
