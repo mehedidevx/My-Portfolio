@@ -14,7 +14,7 @@ const Contact = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           {/* Contact Information Section */}
-          <div className="space-y-6 border border-gray-600 p-5 rounded-xl">
+          <div className="space-y-6 border border-gray-300 p-5 rounded-xl">
             <h3 className="text-2xl font-semibold mb-4 text-secondary">Contact Information</h3>
             
             <div className="space-y-4">
@@ -74,7 +74,7 @@ const Contact = () => {
           </div>
           
           {/* Contact Form Section */}
-          <div className="border border-gray-600 p-5 rounded-xl">
+          <div className="border border-gray-300 p-5 rounded-xl">
             <h3 className="text-2xl font-semibold mb-4 text-secondary">Send a Message</h3>
             
             <form className="space-y-4">
