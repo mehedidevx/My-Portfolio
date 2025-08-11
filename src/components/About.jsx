@@ -21,15 +21,33 @@ const About = () => {
             cascade
             damping={0.7}
           >
-            <article className="fire-glow-card border border-[#00BBA7] p-8 rounded-3xl bg-white dark:bg-gray-900 cursor-default h-full flex flex-col justify-between transition-transform">
+            <article className="fire-glow-card  border-[#00BBA7] p-8 rounded-3xl bg-white dark:bg-gray-900 cursor-default h-full flex flex-col justify-between transition-transform">
               <h3 className="text-3xl font-semibold mb-6 text-secondary tracking-tight">
                 My Journey
               </h3>
               <p className="text-base text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
-                I am a passionate Web Developer with a strong focus on building modern and scalable web applications. My journey hasn’t been smooth — I tried learning from various YouTube tutorials but often struggled due to lack of proper guidance.
+                My journey into web development started with curiosity and a
+                love for creating things that live on the internet. In the early
+                days, I spent countless nights following YouTube tutorials and
+                experimenting with small projects. While it was exciting, I
+                often felt lost without a proper learning path and struggled to
+                connect the dots.
               </p>
               <p className="text-base text-gray-700 dark:text-gray-300 leading-relaxed">
-                Everything changed after enrolling in Programming Hero. It gave me clear direction, developer mindset, and the confidence to work on real-world projects.
+                Everything changed when I joined the{" "}
+                <span className="text-[#00BBA7] font-semibold">
+                  Programming Hero
+                </span>{" "}
+                course. It gave me not only technical skills but also the
+                mindset of a real developer. Through building real-world
+                projects, collaborating with other learners, and solving
+                challenging problems, I transformed my passion into a solid
+                career path.
+              </p>
+              <p className="text-base text-gray-700 dark:text-gray-300 leading-relaxed">
+                Today, I approach every project with dedication, creativity, and
+                a drive to keep improving — because I believe every line of code
+                is a step toward making something impactful.
               </p>
             </article>
           </Slide>
