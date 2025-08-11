@@ -36,12 +36,7 @@ const Projects = () => {
       image: "https://i.postimg.cc/dtwkhvgv/Screenshot-2025-07-29-213032.png",
       description:
         "A modern roommate searching platform with listings, profile management, like system, and contact reveal features.",
-      shortFeatures: [
-        "React",
-        "Firebase Auth",
-        "Tailwind CSS",
-        "Protected Routes",
-      ],
+      shortFeatures: ["React", "Firebase Auth", "Tailwind CSS", "Protected Routes"],
       features: [
         "User Authentication (Email & Google Login)",
         "Add, Edit & Delete Roommate Listings",
@@ -112,48 +107,59 @@ const Projects = () => {
   ];
 
   return (
-    <div id="projects" className="py-36 px-4 bg-base-100 min-h-screen">
-      <Fade triggerOnce direction="down" >
-        <h2 className="text-4xl font-bold text-center mb-12 text-[#00BBA7]">
+    <section
+      id="projects"
+      className="py-36 px-4 bg-base-100 min-h-screen container mx-auto"
+    >
+      <Fade triggerOnce direction="down" duration={1200}>
+        <h2 className="text-4xl font-extrabold text-center mb-16 text-[#00BBA7] tracking-wide uppercase">
           Projects
         </h2>
       </Fade>
 
-      <div className="space-y-10">
+      <div className="space-y-14">
         {projectList.map((project) => (
-          <Slide triggerOnce key={project.id} direction="up" >
-            <div className="flex flex-col md:flex-row items-stretch gap-6 bg-base-200 rounded-2xl shadow-md p-6">
+          <Slide triggerOnce key={project.id} direction="up" duration={1000}>
+            <div
+              className="flex flex-col md:flex-row items-stretch gap-8 bg-white dark:bg-gray-900 rounded-3xl shadow-xl border border-gray-200 dark:border-gray-700 p-6
+              hover:shadow-2xl hover:scale-[1.02] transition-transform duration-300 ease-in-out cursor-pointer"
+              onClick={() => setSelectedProject(project)}
+              role="button"
+              tabIndex={0}
+              onKeyDown={(e) => e.key === "Enter" && setSelectedProject(project)}
+            >
               {/* Image Section */}
-              <div className="md:w-1/2">
+              <div className="md:w-1/2 rounded-xl overflow-hidden shadow-lg">
                 <img
                   src={project.image}
                   alt={project.name}
-                  className="rounded-xl w-full h-64 md:h-full object-cover "
+                  className="w-full h-64 md:h-full object-cover transition-transform duration-500 hover:scale-105"
+                  loading="lazy"
                 />
               </div>
 
               {/* Info Section */}
-              <div className="md:w-1/2 flex flex-col justify-between ">
+              <div className="md:w-1/2 flex flex-col justify-between">
                 <div>
-                  <h2 className="text-2xl font-semibold mb-4 text-secondary">
+                  <h3 className="text-3xl font-semibold mb-4 text-[#00BBA7] tracking-tight">
                     {project.name}
-                  </h2>
-                  <p className="text-base-content mb-4 line-clamp-3">
+                  </h3>
+                  <p className="text-gray-700 dark:text-gray-300 mb-5 line-clamp-3 text-lg">
                     {project.description}
                   </p>
 
-                  <div className="flex flex-wrap gap-2 mb-4">
+                  <div className="flex flex-wrap gap-3 mb-6">
                     {project.shortFeatures.map((item, idx) => (
                       <span
                         key={idx}
-                        className="badge badge-outline badge-primary"
+                        className="badge badge-outline badge-primary text-sm px-4 py-1 rounded-full font-medium"
                       >
                         {item}
                       </span>
                     ))}
                   </div>
 
-                  <ul className="list-disc list-inside text-sm mb-4 space-y-1">
+                  <ul className="list-disc list-inside text-gray-600 dark:text-gray-400 text-sm space-y-1 max-h-32 overflow-y-auto pr-2">
                     {project.features.slice(0, 4).map((feature, idx) => (
                       <li key={idx}>{feature}</li>
                     ))}
@@ -161,12 +167,13 @@ const Projects = () => {
                   </ul>
                 </div>
 
-                <div className="flex flex-wrap gap-4">
+                <div className="flex flex-wrap gap-5 mt-6">
                   <a
                     href={project.liveLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn bg-[#00BBA7] btn-sm"
+                    className="btn bg-[#00BBA7] btn-sm shadow-md hover:shadow-lg transition-shadow"
+                    onClick={(e) => e.stopPropagation()}
                   >
                     Live Site
                   </a>
@@ -174,12 +181,16 @@ const Projects = () => {
                     href={project.githubLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn btn-outline hover:bg-[#00BBA7] btn-sm"
+                    className="btn btn-outline btn-sm hover:bg-[#00BBA7] hover:text-white transition-colors"
+                    onClick={(e) => e.stopPropagation()}
                   >
                     GitHub
                   </a>
                   <button
-                    onClick={() => setSelectedProject(project)}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setSelectedProject(project);
+                    }}
                     className="btn btn-neutral btn-sm"
                   >
                     View Details
@@ -193,41 +204,49 @@ const Projects = () => {
 
       {/* Modal */}
       {selectedProject && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-          <Zoom >
-            <div className="bg-base-100 rounded-2xl shadow-xl max-w-3xl w-full p-6 relative overflow-y-auto max-h-[90vh]">
+        <div
+          className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 p-4"
+          onClick={() => setSelectedProject(null)}
+        >
+          <Zoom triggerOnce>
+            <div
+              className="bg-base-100 dark:bg-gray-900 rounded-3xl shadow-2xl max-w-4xl w-full p-8 overflow-y-auto max-h-[90vh]"
+              onClick={(e) => e.stopPropagation()}
+            >
               <button
-                className="absolute top-3 right-3 btn btn-sm btn-circle"
+                className="absolute top-5 right-5 btn btn-sm btn-circle"
                 onClick={() => setSelectedProject(null)}
                 aria-label="Close modal"
               >
                 ✕
               </button>
+
               <img
                 src={selectedProject.image}
                 alt={selectedProject.name}
-                className="rounded-xl mb-4"
+                className="rounded-xl mb-6 shadow-lg object-cover max-h-80 w-full"
+                loading="lazy"
               />
-              <h2 className="text-3xl font-bold mb-2 text-[#00BBA7]">
+              <h2 className="text-4xl font-bold mb-4 text-[#00BBA7]">
                 {selectedProject.name}
               </h2>
-              <p className="mb-6 text-base-content">
+              <p className="mb-8 text-gray-700 dark:text-gray-300 text-lg leading-relaxed">
                 {selectedProject.description}
               </p>
 
-              <h3 className="text-xl font-semibold mb-2 text-secondary">
+              <h3 className="text-2xl font-semibold mb-4 text-secondary">
                 Features
               </h3>
-              <ul className="list-disc list-inside space-y-1 mb-6">
+              <ul className="list-disc list-inside text-gray-600 dark:text-gray-400 mb-8 max-h-40 overflow-y-auto space-y-2 pr-2">
                 {selectedProject.features.map((feature, idx) => (
                   <li key={idx}>{feature}</li>
                 ))}
               </ul>
 
-              <h3 className="text-xl font-semibold mb-2 text-secondary">
+              <h3 className="text-2xl font-semibold mb-4 text-secondary">
                 Tech Stack
               </h3>
-              <ul className="space-y-1 mb-6">
+              <ul className="space-y-2 text-gray-700 dark:text-gray-300 mb-6">
                 <li>
                   <span className="font-semibold">Frontend:</span>{" "}
                   {selectedProject.techStack.frontend}
@@ -267,7 +286,7 @@ const Projects = () => {
                   href={selectedProject.liveLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn bg-[#00BBA7] btn-sm"
+                  className="btn bg-[#00BBA7] text-white btn-sm shadow-md hover:shadow-lg transition-shadow"
                 >
                   Live Site
                 </a>
@@ -275,7 +294,7 @@ const Projects = () => {
                   href={selectedProject.githubLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn btn-outline hover:bg-[#00BBA7] btn-sm"
+                  className="btn btn-outline btn-sm hover:bg-[#00BBA7] hover:text-white transition-colors"
                 >
                   GitHub
                 </a>
@@ -284,7 +303,7 @@ const Projects = () => {
           </Zoom>
         </div>
       )}
-    </div>
+    </section>
   );
 };
 

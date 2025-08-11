@@ -3,49 +3,52 @@ import { Slide } from "react-awesome-reveal";
 
 const Education = () => {
   return (
-    <div id="education" className="p-8 py-24 bg-base-100">
-      <h2 className="text-4xl font-bold text-center mb-10 text-[#00BBA7]">
+    <section id="education" className="py-28 px-6 bg-base-100 container mx-auto">
+      <h2 className="text-4xl font-extrabold text-center mb-16 text-[#00BBA7] tracking-wide uppercase">
         Education
       </h2>
 
-      <div className=" mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
         {/* HSC Card */}
         <Slide direction="up" duration={1000} triggerOnce>
-          <div className="group rounded-xl bg-base-200 p-6 shadow-lg hover:shadow-xl transition">
-            <div className="relative border-4 border-transparent rounded-xl">
-              <div className="absolute inset-0 rounded-xl  animate-border"></div>
-              <div className="relative z-10">
-                <h3 className="text-2xl font-semibold mb-4 text-secondary border-b border-base-300 pb-2">
-                  Higher Secondary Certificate (HSC)
-                </h3>
-                <p className="text-base-content mb-1">Completed in 2024</p>
-                <p className="text-base-content">
-                  Debiganj Govt College, Panchagarh
-                </p>
-              </div>
+          <article className="group relative rounded-3xl bg-white dark:bg-gray-900 shadow-lg border border-gray-200 dark:border-gray-700 p-8 transition-transform duration-300 hover:scale-[1.03] hover:shadow-2xl cursor-default">
+            {/* Animated glowing border */}
+           <span className="absolute inset-0 rounded-3xl border-2 border-transparent bg-gradient-to-r from-[#00BBA7] to-[#14b8a531] opacity-30 blur-md animate-pulse pointer-events-none"></span>
+
+            <div className="relative z-10">
+              <h3 className="text-3xl font-semibold mb-4 text-[#00BBA7] border-b border-gray-300 pb-3">
+                Higher Secondary Certificate (HSC)
+              </h3>
+              <p className="text-lg font-medium mb-1 text-gray-700 dark:text-gray-300">
+                Completed in 2024
+              </p>
+              <p className="text-gray-600 dark:text-gray-400 text-lg font-light">
+                Debiganj Govt College, Panchagarh
+              </p>
             </div>
-          </div>
+          </article>
         </Slide>
 
         {/* SSC Card */}
         <Slide direction="up" duration={1000} triggerOnce>
-          <div className="group rounded-xl bg-base-200 p-6 shadow-lg hover:shadow-xl transition">
-            <div className="relative border-4 border-transparent rounded-xl">
-              <div className="absolute inset-0 rounded-xl b animate-border"></div>
-              <div className="relative z-10">
-                <h3 className="text-2xl font-semibold mb-4 text-secondary border-b border-base-300 pb-2">
-                  Secondary School Certificate (SSC)
-                </h3>
-                <p className="text-base-content mb-1">Completed in 2020</p>
-                <p className="text-base-content">
-                  Tepriganj High School, Panchagarh
-                </p>
-              </div>
+          <article className="group relative rounded-3xl bg-white dark:bg-gray-900 shadow-lg border border-gray-200 dark:border-gray-700 p-8 transition-transform duration-300 hover:scale-[1.03] hover:shadow-2xl cursor-default">
+            
+            <span className="absolute inset-0 rounded-3xl border-2 border-transparent bg-gradient-to-r from-[#00BBA7] to-[#14b8a531] opacity-30 blur-md animate-pulse pointer-events-none"></span>
+            <div className="relative z-10">
+              <h3 className="text-3xl font-semibold mb-4 text-[#00BBA7] border-b border-gray-300 pb-3">
+                Secondary School Certificate (SSC)
+              </h3>
+              <p className="text-lg font-medium mb-1 text-gray-700 dark:text-gray-300">
+                Completed in 2020
+              </p>
+              <p className="text-gray-600 dark:text-gray-400 text-lg font-light">
+                Tepriganj High School, Panchagarh
+              </p>
             </div>
-          </div>
+          </article>
         </Slide>
       </div>
-    </div>
+    </section>
   );
 };
 
