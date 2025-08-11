@@ -31,7 +31,7 @@ const Navbar = () => {
       {["home", "about", "skills", "projects", "contact"].map((item) => (
         <li key={item} className="list-none">
           <a
-              href={item === "home" ? "/" : `#${item}`}
+              href={`#${item}`}
             className="relative group font-medium px-3 py-2 text-[16px] tracking-wide transition-colors duration-300"
           >
             <span
