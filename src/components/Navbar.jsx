@@ -56,7 +56,8 @@ const Navbar = () => {
   );
 
   return (
-    <div className="navbar bg-base-100 backdrop-blur-lg shadow-md sticky top-0 z-50 transition duration-300">
+    <div className="navbar bg-base-100 backdrop-blur-lg border-b  border-[#00bba848] shadow-md sticky top-0 z-50 transition duration-300">
+     
       <div className="container mx-auto px-4 py-2 flex justify-between items-center">
         {/* Navbar Start */}
         <div className="text-2xl font-bold text-[#00BBA7] hover:text-[#009688] transition duration-300">

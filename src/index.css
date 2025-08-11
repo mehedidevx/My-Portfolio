@@ -2,12 +2,13 @@
 @plugin "daisyui";
 
 a.active {
-  color: #00BBA7; /* blue-600 */
+  color: #00BBA7;
 }
 .btn-primary {
-  background-color: #00BBA7; /* blue-600 */
+  background-color: #00BBA7;
   color: white;
 }
+
 @keyframes spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
@@ -16,5 +17,46 @@ a.active {
   animation: spin 28s linear infinite;
 }
 
+/* Soft Glow */
+@keyframes subtleGlowPulse {
+  0%, 100% {
+    box-shadow:
+      0 0 8px rgba(0, 187, 167, 0.35),
+      0 0 16px rgba(0, 187, 167, 0.25),
+      0 0 24px rgba(0, 187, 167, 0.15);
+  }
+  50% {
+    box-shadow:
+      0 0 14px rgba(0, 187, 167, 0.35),
+      0 0 28px rgba(0, 187, 167, 0.25),
+      0 0 42px rgba(0, 187, 167, 0.15);
+  }
+}
 
+/* Fire Glow (Softened) */
+@keyframes fireGlowPulse {
+  0%, 100% {
+    box-shadow:
+      0 0 8px rgba(0, 187, 167, 0.35),
+      0 0 16px rgba(0, 187, 167, 0.25),
+      0 0 24px rgba(0, 187, 167, 0.15);
+  }
+  50% {
+    box-shadow:
+      0 0 14px rgba(0, 187, 167, 0.45),
+      0 0 28px rgba(0, 187, 167, 0.3),
+      0 0 42px rgba(0, 187, 167, 0.2);
+  }
+}
 
+.fire-glow-card {
+  animation: fireGlowPulse 3.5s ease-in-out infinite;
+  transition: box-shadow 0.3s ease;
+}
+
+.fire-glow-card:hover {
+  box-shadow:
+    0 0 20px rgba(0, 187, 167, 0.5),
+    0 0 40px rgba(0, 187, 167, 0.35),
+    0 0 60px rgba(0, 187, 167, 0.2);
+}

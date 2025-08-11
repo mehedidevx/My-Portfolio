@@ -11,6 +11,8 @@ import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
+import MyToolkit from "./components/MyToolkit";
+
 
 function App() {
   return (
@@ -21,6 +23,7 @@ function App() {
         
         <Hero></Hero>
         <About></About>
+       <MyToolkit></MyToolkit>
         <Skills></Skills>
         <Projects></Projects>
         <Education></Education>

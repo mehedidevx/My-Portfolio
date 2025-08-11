@@ -50,7 +50,7 @@ const Skills = () => {
 
   return (
     <div id="skills" ref={ref} className="py-20 px-4 bg-base-100">
-      <h2 className="text-4xl font-bold text-center mb-14 text-[#00BBA7]">
+      <h2 className="text-4xl font-extrabold text-center mb-14 text-[#00BBA7] tracking-wide">
         Skills & Expertise
       </h2>
 
@@ -58,24 +58,26 @@ const Skills = () => {
         {skillCategories.map((category) => (
           <div
             key={category.title}
-            className="backdrop-blur-lg bg-white/10 dark:bg-gray-800/30 p-6 rounded-xl shadow-lg border border-white/20 hover:shadow-2xl transition duration-300"
+            className="backdrop-blur-md bg-white/10 dark:bg-gray-900/30 p-6 rounded-2xl shadow-md border border-white/20 hover:shadow-[0_0_30px_rgba(0,187,167,0.7)] transition-shadow duration-500 ease-in-out fire-glow-card"
           >
-            <h3 className="text-2xl font-semibold text-center mb-6 text-[#00BBA7]">
+            <h3 className="text-2xl font-semibold text-center mb-6 text-[#00BBA7] tracking-tight">
               {category.title}
             </h3>
-            <div className="space-y-5">
+            <div className="space-y-6">
               {category.skills.map((skill) => (
-                <div key={skill.name} className="space-y-2">
+                <div key={skill.name} className="space-y-3">
                   <div className="flex justify-between items-center">
-                    <div className="flex items-center gap-2">
-                      {skill.icon}
-                      <span className="font-medium">{skill.name}</span>
+                    <div className="flex items-center gap-3 text-lg font-semibold text-white/90">
+                      <span className="text-xl">{skill.icon}</span>
+                      <span>{skill.name}</span>
                     </div>
-                    <span className="text-sm">{skill.level}%</span>
+                    <span className="text-sm font-semibold text-[#00BBA7]">
+                      {skill.level}%
+                    </span>
                   </div>
-                  <div className="w-full bg-base-300 rounded-full h-3 overflow-hidden">
+                  <div className="w-full bg-base-300 rounded-full h-4 overflow-hidden shadow-inner">
                     <div
-                      className="h-3 rounded-full bg-gradient-to-r from-[#00BBA7] to-blue-500 transition-all duration-1000 ease-out"
+                      className="h-4 rounded-full bg-gradient-to-r from-[#00BBA7] to-blue-500 transition-all duration-1200 ease-out shadow-[0_0_10px_rgba(0,187,167,0.7)]"
                       style={{
                         width: inView ? `${skill.level}%` : "0%",
                       }}
