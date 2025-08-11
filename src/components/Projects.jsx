@@ -172,7 +172,7 @@ const Projects = () => {
                     href={project.liveLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn bg-[#00BBA7] btn-sm shadow-md hover:shadow-lg transition-shadow"
+                    className="btn bg-[#00BBA7] btn-sm text-white shadow-md hover:shadow-lg transition-shadow"
                     onClick={(e) => e.stopPropagation()}
                   >
                     Live Site
