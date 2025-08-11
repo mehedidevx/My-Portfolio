@@ -10,14 +10,31 @@ import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import MyToolkit from "./components/MyToolkit";
 import Snowfall from "react-snowfall";
+import { useEffect, useState } from "react";
 
 function App() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate loading for 2 seconds
+    const timer = setTimeout(() => setLoading(false), 2000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center h-screen bg-base-100">
+        <div className="animate-spin rounded-full h-20 w-20 border-t-4 border-b-4 border-[#00BBA7]"></div>
+      </div>
+    );
+  }
+
   return (
     <>
       {/* Snowfall should be OUTSIDE container and fixed */}
       <Snowfall
         color="#00BBA7"
-        snowflakeCount={80}   
+        snowflakeCount={80}
         wind={[-1, 1]}
         style={{
           position: "fixed",
@@ -26,7 +43,7 @@ function App() {
           width: "100vw",
           height: "100vh",
           pointerEvents: "none",
-          zIndex: 999,      
+          zIndex: 999,
         }}
       />
 
