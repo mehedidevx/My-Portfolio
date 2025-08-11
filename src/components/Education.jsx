@@ -10,7 +10,7 @@ const Education = () => {
 
       <div className=" mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* HSC Card */}
-        <Slide direction="up" duration={1000} triggerOnce={false}>
+        <Slide direction="up" duration={1000} triggerOnce>
           <div className="group rounded-xl bg-base-200 p-6 shadow-lg hover:shadow-xl transition">
             <div className="relative border-4 border-transparent rounded-xl">
               <div className="absolute inset-0 rounded-xl  animate-border"></div>
@@ -28,7 +28,7 @@ const Education = () => {
         </Slide>
 
         {/* SSC Card */}
-        <Slide direction="up" duration={1000} triggerOnce={false}>
+        <Slide direction="up" duration={1000} triggerOnce>
           <div className="group rounded-xl bg-base-200 p-6 shadow-lg hover:shadow-xl transition">
             <div className="relative border-4 border-transparent rounded-xl">
               <div className="absolute inset-0 rounded-xl b animate-border"></div>

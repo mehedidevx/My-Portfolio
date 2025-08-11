@@ -113,7 +113,7 @@ const Projects = () => {
 
   return (
     <div id="projects" className="py-36 px-4 bg-base-100 min-h-screen">
-      <Fade direction="down" >
+      <Fade triggerOnce direction="down" >
         <h2 className="text-4xl font-bold text-center mb-12 text-[#00BBA7]">
           Projects
         </h2>
@@ -121,7 +121,7 @@ const Projects = () => {
 
       <div className="space-y-10">
         {projectList.map((project) => (
-          <Slide key={project.id} direction="up" >
+          <Slide triggerOnce key={project.id} direction="up" >
             <div className="flex flex-col md:flex-row items-stretch gap-6 bg-base-200 rounded-2xl shadow-md p-6">
               {/* Image Section */}
               <div className="md:w-1/2">

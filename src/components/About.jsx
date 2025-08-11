@@ -5,7 +5,7 @@ const About = () => {
   return (
     <section id="about" className="py-32 px-4 bg-base-100">
       <div className="mx-auto">
-        <Fade direction="up" duration={1200}>
+        <Fade triggerOnce direction="up" duration={1200}>
           <h2 className="text-4xl font-bold text-center mb-12 text-[#00BBA7]">
             About Me
           </h2>
@@ -13,7 +13,7 @@ const About = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
           {/* Left - My Journey */}
-          <Slide direction="up" duration={1500}>
+          <Slide triggerOnce direction="up" duration={1500}>
             <div className="border border-[#00BBA7] p-6 rounded-2xl shadow-lg h-full">
               <h3 className="text-2xl font-semibold mb-4 text-secondary">
                 My Journey
@@ -33,7 +33,7 @@ const About = () => {
           </Slide>
 
           {/* Right - What I Do */}
-          <Slide direction="up" duration={1500}>
+          <Slide triggerOnce direction="up" duration={1500}>
             <div className="bg-base-200 p-6 rounded-2xl shadow-lg">
               <h3 className="text-2xl font-semibold mb-4 text-secondary">
                 What I Do
