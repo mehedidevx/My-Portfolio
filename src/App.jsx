@@ -12,6 +12,7 @@ import MyToolkit from "./components/MyToolkit";
 import Snowfall from "react-snowfall";
 import { useEffect, useState } from "react";
 
+
 function App() {
   const [loading, setLoading] = useState(true);
 
@@ -47,8 +48,11 @@ function App() {
         }}
       />
 
+     
+
       <div className="relative z-10">
         <Navbar />
+       
 
         <div className="container mx-auto">
           <Hero />

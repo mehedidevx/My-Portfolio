@@ -7,6 +7,35 @@ const Projects = () => {
   const projectList = [
     {
       id: 1,
+      name: "Micro-Task & Earning Platform",
+      image: "https://i.postimg.cc/ZYFPztkH/Screenshot-2025-08-20-115558.png",
+      description:
+        "A micro-task marketplace platform where buyers can post tasks, manage them via dashboard, and workers can complete tasks to earn coins with secure payments.",
+      shortFeatures: ["React", "Firebase", "MongoDB", "Stripe", "Dashboard"],
+      features: [
+        "Role-based Authentication (Buyer, Worker, Admin)",
+        "Post, Update & Delete Tasks with Image Upload",
+        "Coin-based Payment System with Refund Policy",
+        "Dashboard for Task Management & Earnings",
+        "Admin Role for User & Task Management",
+        "Pagination & Search for Tasks",
+        "Responsive Design with Dark/Light Theme",
+        "Notification & Alert System",
+      ],
+      techStack: {
+        frontend: "React.js, Tailwind CSS, DaisyUI, React Router DOM",
+        backend: "Node.js, Express.js, MongoDB",
+        auth: "Firebase Authentication",
+        imageUpload: "imgbb API",
+        payment: "Stripe",
+        state: "TanStack Query, Axios",
+        deployment: "Vercel (Client), Render (Server)",
+      },
+      liveLink: "https://micro-task-30fbe.web.app/",
+      githubLink: "https://github.com/mehedidevx/Micro-Task-Client",
+    },
+    {
+      id: 2,
       name: "Artifact Tracker",
       image: "https://i.postimg.cc/269jcR2b/Screenshot-2025-07-29-212328.png",
       description:
@@ -31,12 +60,17 @@ const Projects = () => {
       githubLink: "https://github.com/mehedidevx/Artifact-Tracker-Client",
     },
     {
-      id: 2,
+      id: 3,
       name: "Roommate Finder Website",
       image: "https://i.postimg.cc/dtwkhvgv/Screenshot-2025-07-29-213032.png",
       description:
         "A modern roommate searching platform with listings, profile management, like system, and contact reveal features.",
-      shortFeatures: ["React", "Firebase Auth", "Tailwind CSS", "Protected Routes"],
+      shortFeatures: [
+        "React",
+        "Firebase Auth",
+        "Tailwind CSS",
+        "Protected Routes",
+      ],
       features: [
         "User Authentication (Email & Google Login)",
         "Add, Edit & Delete Roommate Listings",
@@ -59,7 +93,7 @@ const Projects = () => {
       githubLink: "https://github.com/mehedidevx/Roommate-Finder-Client",
     },
     {
-      id: 3,
+      id: 4,
       name: "JobTrack - Job Application Manager",
       image: "https://i.postimg.cc/C563pwqD/Screenshot-2025-07-29-213404.png",
       description:
@@ -83,7 +117,7 @@ const Projects = () => {
       githubLink: "https://github.com/mehedidevx/Job-Track",
     },
     {
-      id: 4,
+      id: 5,
       name: "Biker Zone",
       image: "https://i.postimg.cc/ncSFnJJ3/Screenshot-2025-07-29-213307.png",
       description:
@@ -126,7 +160,9 @@ const Projects = () => {
               onClick={() => setSelectedProject(project)}
               role="button"
               tabIndex={0}
-              onKeyDown={(e) => e.key === "Enter" && setSelectedProject(project)}
+              onKeyDown={(e) =>
+                e.key === "Enter" && setSelectedProject(project)
+              }
             >
               {/* Image Section */}
               <div className="md:w-1/2 rounded-xl overflow-hidden shadow-lg">
